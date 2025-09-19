@@ -22,7 +22,7 @@ export PATH="/d/Xilinx/Vivado/2022.2/bin:$PATH"
 Para clonar el repositorio con exito y sin errores usar la siguiente linea
 
 ```bash
-git clone -b devFabianAFEHOG --recurse-submodules https://github.com/fabioc9675/DUNE_Daphne_v3_AFE.git
+git clone -b devFabianETH --recurse-submodules https://github.com/fabioc9675/VivadoTutorials_Prj.git
 ```
 
 Con `--recurse-submodules` se garantiza que se clonan los submodulos completos, y con `-b devFabian` es para clonar el branch en el que estoy trabajando con el modulo HOG,
