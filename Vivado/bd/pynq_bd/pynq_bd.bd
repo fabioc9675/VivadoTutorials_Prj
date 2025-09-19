@@ -9,7 +9,8 @@
       "tool_version": "2022.2"
     },
     "design_tree": {
-      "processing_system7_0": ""
+      "processing_system7_0": "",
+      "crc_gen_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1881,6 +1882,46 @@
                 }
               }
             }
+          }
+        }
+      },
+      "crc_gen_0": {
+        "vlnv": "xilinx.com:module_ref:crc_gen:1.0",
+        "xci_name": "pynq_bd_crc_gen_0_0",
+        "xci_path": "ip\\pynq_bd_crc_gen_0_0\\pynq_bd_crc_gen_0_0.xci",
+        "inst_hier_path": "crc_gen_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "crc_gen",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "crc_en": {
+            "direction": "I"
+          },
+          "crc_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
           }
         }
       }
