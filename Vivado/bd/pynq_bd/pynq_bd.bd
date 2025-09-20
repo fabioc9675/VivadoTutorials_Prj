@@ -11,11 +11,11 @@
     "design_tree": {
       "processing_system7_0": "",
       "rmii_axis_0": "",
-      "axis_gpio_0": "",
       "axis_snoop_debug_0": "",
       "axis_uart_0": "",
       "clk_wiz_0": "",
-      "proc_sys_reset_0": ""
+      "proc_sys_reset_0": "",
+      "axis_gpio_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1934,12 +1934,6 @@
         "xci_path": "ip\\pynq_bd_rmii_axis_0_2\\pynq_bd_rmii_axis_0_2.xci",
         "inst_hier_path": "rmii_axis_0"
       },
-      "axis_gpio_0": {
-        "vlnv": "FabianCastano:toolbox:axis_gpio:1.0",
-        "xci_name": "pynq_bd_axis_gpio_0_1",
-        "xci_path": "ip\\pynq_bd_axis_gpio_0_1\\pynq_bd_axis_gpio_0_1.xci",
-        "inst_hier_path": "axis_gpio_0"
-      },
       "axis_snoop_debug_0": {
         "vlnv": "FabianCastano:toolbox:axis_snoop_debug:1.0",
         "xci_name": "pynq_bd_axis_snoop_debug_0_1",
@@ -2001,6 +1995,12 @@
         "xci_name": "pynq_bd_proc_sys_reset_0_0",
         "xci_path": "ip\\pynq_bd_proc_sys_reset_0_0\\pynq_bd_proc_sys_reset_0_0.xci",
         "inst_hier_path": "proc_sys_reset_0"
+      },
+      "axis_gpio_0": {
+        "vlnv": "FabianCastano:toolbox:axis_gpio:1.0",
+        "xci_name": "pynq_bd_axis_gpio_0_1",
+        "xci_path": "ip\\pynq_bd_axis_gpio_0_1\\pynq_bd_axis_gpio_0_1.xci",
+        "inst_hier_path": "axis_gpio_0"
       }
     },
     "interface_nets": {
@@ -2077,13 +2077,13 @@
       "clk_wiz_0_clk_out1": {
         "ports": [
           "clk_wiz_0/clk_out1",
-          "axis_gpio_0/s00_axis_aclk",
-          "axis_gpio_0/m00_axis_aclk",
           "rmii_axis_0/m00_axis_aclk",
           "rmii_axis_0/s00_axis_aclk",
           "proc_sys_reset_0/slowest_sync_clk",
           "axis_snoop_debug_0/axis_aclk",
-          "axis_uart_0/clk"
+          "axis_uart_0/clk",
+          "axis_gpio_0/s00_axis_aclk",
+          "axis_gpio_0/m00_axis_aclk"
         ]
       },
       "clk_wiz_0_clk_out2": {
@@ -2103,10 +2103,10 @@
           "proc_sys_reset_0/peripheral_aresetn",
           "rmii_axis_0/s00_axis_aresetn",
           "rmii_axis_0/m00_axis_aresetn",
-          "axis_gpio_0/s00_axis_aresetn",
-          "axis_gpio_0/m00_axis_aresetn",
           "axis_snoop_debug_0/axis_aresetn",
-          "axis_uart_0/rstn"
+          "axis_uart_0/rstn",
+          "axis_gpio_0/s00_axis_aresetn",
+          "axis_gpio_0/m00_axis_aresetn"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {

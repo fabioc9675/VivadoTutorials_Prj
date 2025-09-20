@@ -1,15 +1,21 @@
 # Definitional proc to organize widgets for parameters.
 proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "Component_Name"
-  ipgui::add_param $IPINST -name "PREFIX_CHARS"
-  ipgui::add_param $IPINST -name "POSTFIX_CHARS"
-  ipgui::add_param $IPINST -name "PREFIX_STRING"
-  ipgui::add_param $IPINST -name "POSTFIX_STRING"
-  ipgui::add_param $IPINST -name "GPIO_WIDTH"
-  ipgui::add_param $IPINST -name "AXI_OUT_WIDTH"
-  ipgui::add_param $IPINST -name "INCLUDE_CRLF"
-  ipgui::add_param $IPINST -name "BYTE_START"
-  ipgui::add_param $IPINST -name "AXI_WIDTH"
+  #Adding Page
+  set Switches_in [ipgui::add_page $IPINST -name "Switches in"]
+  ipgui::add_param $IPINST -name "PREFIX_CHARS" -parent ${Switches_in}
+  ipgui::add_param $IPINST -name "POSTFIX_CHARS" -parent ${Switches_in}
+  ipgui::add_param $IPINST -name "PREFIX_STRING" -parent ${Switches_in}
+  ipgui::add_param $IPINST -name "POSTFIX_STRING" -parent ${Switches_in}
+  ipgui::add_param $IPINST -name "AXI_OUT_WIDTH" -parent ${Switches_in}
+  ipgui::add_param $IPINST -name "INCLUDE_CRLF" -parent ${Switches_in}
+
+  #Adding Page
+  set LEDs_out [ipgui::add_page $IPINST -name "LEDs out"]
+  ipgui::add_param $IPINST -name "BYTE_START" -parent ${LEDs_out}
+  ipgui::add_param $IPINST -name "GPIO_WIDTH" -parent ${LEDs_out}
+  ipgui::add_param $IPINST -name "AXI_WIDTH" -parent ${LEDs_out}
+
 
 }
 
