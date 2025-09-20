@@ -1,23 +1,15 @@
 # Definitional proc to organize widgets for parameters.
 proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "Component_Name"
-  #Adding Page
-  set Switches_in [ipgui::add_page $IPINST -name "Switches in"]
-  ipgui::add_param $IPINST -name "PREFIX_CHARS" -parent ${Switches_in}
-  ipgui::add_param $IPINST -name "POSTFIX_CHARS" -parent ${Switches_in}
-  ipgui::add_param $IPINST -name "PREFIX_STRING" -parent ${Switches_in}
-  ipgui::add_param $IPINST -name "POSTFIX_STRING" -parent ${Switches_in}
-  ipgui::add_param $IPINST -name "AXI_OUT_WIDTH" -parent ${Switches_in}
-  set INCLUDE_CRLF [ipgui::add_param $IPINST -name "INCLUDE_CRLF" -parent ${Switches_in}]
-  set_property tooltip {Include Carriage Return and Line Feed at end of line} ${INCLUDE_CRLF}
-
-  #Adding Page
-  set Page_0 [ipgui::add_page $IPINST -name "Page 0" -display_name {LEDs out}]
-  set_property tooltip {LEDs out} ${Page_0}
-  ipgui::add_param $IPINST -name "BYTE_START" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "GPIO_WIDTH" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "AXI_WIDTH" -parent ${Page_0}
-
+  ipgui::add_param $IPINST -name "PREFIX_CHARS"
+  ipgui::add_param $IPINST -name "POSTFIX_CHARS"
+  ipgui::add_param $IPINST -name "PREFIX_STRING"
+  ipgui::add_param $IPINST -name "POSTFIX_STRING"
+  ipgui::add_param $IPINST -name "GPIO_WIDTH"
+  ipgui::add_param $IPINST -name "AXI_OUT_WIDTH"
+  ipgui::add_param $IPINST -name "INCLUDE_CRLF"
+  ipgui::add_param $IPINST -name "BYTE_START"
+  ipgui::add_param $IPINST -name "AXI_WIDTH"
 
 }
 
