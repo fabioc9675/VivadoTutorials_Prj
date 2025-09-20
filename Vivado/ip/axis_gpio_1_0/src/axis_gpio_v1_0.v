@@ -28,7 +28,7 @@ module axis_gpio_v1_0 #
     parameter			      POSTFIX_CHARS = 0,
     parameter [(8*PREFIX_CHARS)-1:0]  PREFIX_STRING = "SWITCHES CHANGED! NEW VALUE: 0x",
     parameter [(8*POSTFIX_CHARS)-1:0] POSTFIX_STRING = "",
-    parameter			      GPIO_WIDTH = 16,
+    parameter			      GPIO_WIDTH = 4,
     parameter			      AXI_OUT_WIDTH = 8,
     parameter			      INCLUDE_CRLF = 1,
     parameter			      BYTE_START = 31,

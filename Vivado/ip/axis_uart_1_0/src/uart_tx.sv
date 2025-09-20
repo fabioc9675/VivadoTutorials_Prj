@@ -22,7 +22,7 @@
 
 module uart_tx
   #(
-    parameter CLKRATE = 100000000,
+    parameter CLKRATE = 50000000,
     parameter BAUD = 115200,
     parameter WORD_LENGTH = 8
     )

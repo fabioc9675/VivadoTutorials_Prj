@@ -12,10 +12,10 @@
       "processing_system7_0": "",
       "rmii_axis_0": "",
       "axis_snoop_debug_0": "",
-      "axis_uart_0": "",
       "clk_wiz_0": "",
       "proc_sys_reset_0": "",
-      "axis_gpio_0": ""
+      "axis_gpio_0": "",
+      "axis_uart_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -111,27 +111,39 @@
           },
           "BA": {
             "physical_name": "DDR_ba",
-            "direction": "IO"
+            "direction": "IO",
+            "left": "2",
+            "right": "0"
           },
           "ADDR": {
             "physical_name": "DDR_addr",
-            "direction": "IO"
+            "direction": "IO",
+            "left": "14",
+            "right": "0"
           },
           "DM": {
             "physical_name": "DDR_dm",
-            "direction": "IO"
+            "direction": "IO",
+            "left": "3",
+            "right": "0"
           },
           "DQ": {
             "physical_name": "DDR_dq",
-            "direction": "IO"
+            "direction": "IO",
+            "left": "31",
+            "right": "0"
           },
           "DQS_N": {
             "physical_name": "DDR_dqs_n",
-            "direction": "IO"
+            "direction": "IO",
+            "left": "3",
+            "right": "0"
           },
           "DQS_P": {
             "physical_name": "DDR_dqs_p",
-            "direction": "IO"
+            "direction": "IO",
+            "left": "3",
+            "right": "0"
           }
         }
       },
@@ -148,7 +160,9 @@
         "port_maps": {
           "MIO": {
             "physical_name": "FIXED_IO_mio",
-            "direction": "IO"
+            "direction": "IO",
+            "left": "53",
+            "right": "0"
           },
           "DDR_VRN": {
             "physical_name": "FIXED_IO_ddr_vrn",
@@ -178,11 +192,6 @@
         "type": "clk",
         "direction": "O"
       },
-      "LED_0": {
-        "direction": "O",
-        "left": "15",
-        "right": "0"
-      },
       "ETH_TXD_0": {
         "direction": "O",
         "left": "1",
@@ -202,13 +211,18 @@
         "left": "1",
         "right": "0"
       },
+      "UART_TX_0": {
+        "direction": "O"
+      },
       "SW_0": {
         "direction": "I",
         "left": "15",
         "right": "0"
       },
-      "UART_TX_0": {
-        "direction": "O"
+      "LED_0": {
+        "direction": "O",
+        "left": "15",
+        "right": "0"
       }
     },
     "components": {
@@ -1966,12 +1980,6 @@
         "xci_path": "ip\\pynq_bd_axis_snoop_debug_0_1\\pynq_bd_axis_snoop_debug_0_1.xci",
         "inst_hier_path": "axis_snoop_debug_0"
       },
-      "axis_uart_0": {
-        "vlnv": "FabianCastano:toolbox:axis_uart:1.0",
-        "xci_name": "pynq_bd_axis_uart_0_1",
-        "xci_path": "ip\\pynq_bd_axis_uart_0_1\\pynq_bd_axis_uart_0_1.xci",
-        "inst_hier_path": "axis_uart_0"
-      },
       "clk_wiz_0": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
         "xci_name": "pynq_bd_clk_wiz_0_0",
@@ -2026,7 +2034,18 @@
         "vlnv": "FabianCastano:toolbox:axis_gpio:1.0",
         "xci_name": "pynq_bd_axis_gpio_0_1",
         "xci_path": "ip\\pynq_bd_axis_gpio_0_1\\pynq_bd_axis_gpio_0_1.xci",
-        "inst_hier_path": "axis_gpio_0"
+        "inst_hier_path": "axis_gpio_0",
+        "parameters": {
+          "GPIO_WIDTH": {
+            "value": "4"
+          }
+        }
+      },
+      "axis_uart_0": {
+        "vlnv": "FabianCastano:toolbox:axis_uart:1.0",
+        "xci_name": "pynq_bd_axis_uart_0_1",
+        "xci_path": "ip\\pynq_bd_axis_uart_0_1\\pynq_bd_axis_uart_0_1.xci",
+        "inst_hier_path": "axis_uart_0"
       }
     },
     "interface_nets": {
@@ -2107,9 +2126,9 @@
           "rmii_axis_0/s00_axis_aclk",
           "proc_sys_reset_0/slowest_sync_clk",
           "axis_snoop_debug_0/axis_aclk",
-          "axis_uart_0/clk",
           "axis_gpio_0/s00_axis_aclk",
-          "axis_gpio_0/m00_axis_aclk"
+          "axis_gpio_0/m00_axis_aclk",
+          "axis_uart_0/clk"
         ]
       },
       "clk_wiz_0_clk_out2": {
@@ -2130,9 +2149,9 @@
           "rmii_axis_0/s00_axis_aresetn",
           "rmii_axis_0/m00_axis_aresetn",
           "axis_snoop_debug_0/axis_aresetn",
-          "axis_uart_0/rstn",
           "axis_gpio_0/s00_axis_aresetn",
-          "axis_gpio_0/m00_axis_aresetn"
+          "axis_gpio_0/m00_axis_aresetn",
+          "axis_uart_0/rstn"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {

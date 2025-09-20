@@ -31,7 +31,7 @@ module sw_axis
     parameter [(8*PREFIX_CHARS)-1:0]  PREFIX_STRING = "SWITCHES CHANGED! NEW VALUE: 0x",
     parameter [(8*POSTFIX_CHARS)-1:0] POSTFIX_STRING = "",
     // GPIO input width
-    parameter			      GPIO_WIDTH = 16,
+    parameter			      GPIO_WIDTH = 4,
     // output axi bus width
     parameter			      AXI_OUT_WIDTH = 8,
     // Flag indicating if an additional two CRLF bytes must be added on the end

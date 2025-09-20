@@ -63,7 +63,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c3e6bd1b</spirit:value>
+            <spirit:value>ab06503b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -82,7 +82,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c3e6bd1b</spirit:value>
+            <spirit:value>ab06503b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -336,17 +336,17 @@
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>1</xilinx:coreRevision>
+      <xilinx:coreRevision>2</xilinx:coreRevision>
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>user.org:user:axis_uart:1.0</xilinx:canUpgradeFrom>
         <xilinx:canUpgradeFrom>fpgasforbeginners:toolbox:axis_uart:1.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2025-09-20T20:44:23Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2025-09-20T22:16:42Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2022.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="b8ac38b2"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="5e46f6e3"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="e0bf3d4d"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="d3084ace"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="867a4071"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="d30fd9a8"/>

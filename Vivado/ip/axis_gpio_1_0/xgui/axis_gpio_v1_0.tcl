@@ -7,14 +7,14 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "POSTFIX_CHARS" -parent ${Switches_in}
   ipgui::add_param $IPINST -name "PREFIX_STRING" -parent ${Switches_in}
   ipgui::add_param $IPINST -name "POSTFIX_STRING" -parent ${Switches_in}
-  ipgui::add_param $IPINST -name "AXI_OUT_WIDTH" -parent ${Switches_in}
   ipgui::add_param $IPINST -name "INCLUDE_CRLF" -parent ${Switches_in}
+  ipgui::add_param $IPINST -name "AXI_WIDTH" -parent ${Switches_in}
 
   #Adding Page
   set LEDs_out [ipgui::add_page $IPINST -name "LEDs out"]
   ipgui::add_param $IPINST -name "BYTE_START" -parent ${LEDs_out}
   ipgui::add_param $IPINST -name "GPIO_WIDTH" -parent ${LEDs_out}
-  ipgui::add_param $IPINST -name "AXI_WIDTH" -parent ${LEDs_out}
+  ipgui::add_param $IPINST -name "AXI_OUT_WIDTH" -parent ${LEDs_out}
 
 
 }
